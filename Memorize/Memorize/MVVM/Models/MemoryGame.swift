@@ -48,15 +48,15 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     
     mutating func choose(card: Card) {
         
-        let rightChoisePointAward: Int = 2
+        let rightChoicePointAward: Int = 2
         let sawSameCardAgainPointPenalty: Int = 1
         
-        if let chosenIndex = cards.firstIndex(matching: card) {
+        if let chosenIndex = cards.firstIndex(where: { chosenCard in chosenCard.id == card.id }) {
             if !cards[chosenIndex].isFaceUp, !cards[chosenIndex].isMatched {
                 if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
                     if cards[chosenIndex].content == cards[potentialMatchIndex].content {
                         matchedTwoCards = true
-                        points += rightChoisePointAward
+                        points += rightChoicePointAward
                         cards[chosenIndex].isMatched = true
                         cards[potentialMatchIndex].isMatched = true
                         cards[chosenIndex].wasSeen = true

@@ -1,5 +1,5 @@
 //
-//  RoundedButtton.swift
+//  RoundedButton.swift
 //  Memorize
 //
 //  Created by Gabriel on 8/18/21.
@@ -11,7 +11,7 @@ struct RoundedButton: View {
     var text: String
     var action: () -> Void
     var backgroundColor = Color.darkSensitive.black
-    var foregoundColor = Color.darkSensitive.white
+    var foregroundColor = Color.darkSensitive.white
     
     var body: some View {
         Button(action: action) {
@@ -21,7 +21,7 @@ struct RoundedButton: View {
                     .font(.title3)
             }
             .padding(10)
-            .foregroundColor(foregoundColor)
+            .foregroundColor(foregroundColor)
             .background(backgroundColor)
             .cornerRadius(10)
         }

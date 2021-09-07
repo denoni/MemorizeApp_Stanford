@@ -16,20 +16,23 @@ struct EmojiMemoryGameView: View {
                 .bold().font(Font.largeTitle)
             Text("Points: \(gameViewModel.points)")
                 .font(Font.title2)
-            Grid(gameViewModel.cards) { card in
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
+                ForEach(gameViewModel.cards) { card in
                     CardView(card: card).onTapGesture {
                         withAnimation(.easeInOut(duration: card3DRotationDuration)) {
                             gameViewModel.choose(card: card)
                         }
                     }.padding(cardPadding)
+                    .aspectRatio(5/6, contentMode: .fit)
+              }
             }.padding()
             .foregroundColor(gameViewModel.theme.cardColor)
             RoundedButton.init(text: newGameButtonText,
                                action: { withAnimation(.easeInOut(duration: shuffleDuration)) {
                                     gameViewModel.rebuild() }
             })
-        }
-    }    
+      }
+  }
 }
 
 struct CardView: View {

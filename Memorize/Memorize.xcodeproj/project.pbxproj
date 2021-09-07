@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		C084C21526B5D2A100A53153 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084C21426B5D2A100A53153 /* MemoryGame.swift */; };
 		C084C21726B5D42100A53153 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084C21626B5D42100A53153 /* EmojiMemoryGame.swift */; };
-		C0881F5826C95963000CC275 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0881F5726C95963000CC275 /* Grid.swift */; };
-		C0881F5A26C95FE7000CC275 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0881F5926C95FE7000CC275 /* GridLayout.swift */; };
-		C0881F5C26C96C72000CC275 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0881F5B26C96C72000CC275 /* Array+Identifiable.swift */; };
-		C08EEC1026CD7246008C8F9D /* RoundedButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08EEC0F26CD7246008C8F9D /* RoundedButtton.swift */; };
+		C08EEC1026CD7246008C8F9D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08EEC0F26CD7246008C8F9D /* RoundedButton.swift */; };
 		C08EEC1426CD769D008C8F9D /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08EEC1326CD769D008C8F9D /* Pie.swift */; };
 		C08EEC1626CD7A0A008C8F9D /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08EEC1526CD7A0A008C8F9D /* Cardify.swift */; };
 		C08EEC1826CD8184008C8F9D /* Color+DarkSensitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08EEC1726CD8184008C8F9D /* Color+DarkSensitive.swift */; };
@@ -27,10 +24,7 @@
 /* Begin PBXFileReference section */
 		C084C21426B5D2A100A53153 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		C084C21626B5D42100A53153 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
-		C0881F5726C95963000CC275 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
-		C0881F5926C95FE7000CC275 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
-		C0881F5B26C96C72000CC275 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
-		C08EEC0F26CD7246008C8F9D /* RoundedButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtton.swift; sourceTree = "<group>"; };
+		C08EEC0F26CD7246008C8F9D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		C08EEC1326CD769D008C8F9D /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		C08EEC1526CD7A0A008C8F9D /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		C08EEC1726CD8184008C8F9D /* Color+DarkSensitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+DarkSensitive.swift"; sourceTree = "<group>"; };
@@ -58,7 +52,6 @@
 		C0881F5D26C96CA9000CC275 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C0881F5B26C96C72000CC275 /* Array+Identifiable.swift */,
 				C09C450526CB0B480030E123 /* Array+(with)SingleElement.swift */,
 				C08EEC1726CD8184008C8F9D /* Color+DarkSensitive.swift */,
 			);
@@ -74,15 +67,6 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
-		C08EEC1226CD7419008C8F9D /* Grid (View) */ = {
-			isa = PBXGroup;
-			children = (
-				C0881F5726C95963000CC275 /* Grid.swift */,
-				C0881F5926C95FE7000CC275 /* GridLayout.swift */,
-			);
-			path = "Grid (View)";
-			sourceTree = "<group>";
-		};
 		C08EEC1926CD8990008C8F9D /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +78,7 @@
 		C08EEC1A26CD899A008C8F9D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C08EEC1226CD7419008C8F9D /* Grid (View) */,
-				C08EEC0F26CD7246008C8F9D /* RoundedButtton.swift */,
+				C08EEC0F26CD7246008C8F9D /* RoundedButton.swift */,
 				C08EEC1326CD769D008C8F9D /* Pie.swift */,
 			);
 			path = Views;
@@ -253,14 +236,11 @@
 			files = (
 				C09C450626CB0B480030E123 /* Array+(with)SingleElement.swift in Sources */,
 				C084C21526B5D2A100A53153 /* MemoryGame.swift in Sources */,
-				C08EEC1026CD7246008C8F9D /* RoundedButtton.swift in Sources */,
+				C08EEC1026CD7246008C8F9D /* RoundedButton.swift in Sources */,
 				C0F929DA26B48030007986BD /* EmojiMemoryGameView.swift in Sources */,
 				C08EEC1826CD8184008C8F9D /* Color+DarkSensitive.swift in Sources */,
 				C0F929D826B48030007986BD /* MemorizeApp.swift in Sources */,
-				C0881F5A26C95FE7000CC275 /* GridLayout.swift in Sources */,
 				C08EEC1626CD7A0A008C8F9D /* Cardify.swift in Sources */,
-				C0881F5826C95963000CC275 /* Grid.swift in Sources */,
-				C0881F5C26C96C72000CC275 /* Array+Identifiable.swift in Sources */,
 				C08EEC1426CD769D008C8F9D /* Pie.swift in Sources */,
 				C084C21726B5D42100A53153 /* EmojiMemoryGame.swift in Sources */,
 				C09C450B26CB3D0D0030E123 /* EmojiMemoryGameTheme.swift in Sources */,
